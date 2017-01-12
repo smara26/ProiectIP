@@ -98,3 +98,166 @@ int mainmenu()
 	return 0;
 
 }
+
+int lungime()
+{
+	int optiune;
+	cout << "Ati ales conversiile pentru lungime." << endl;
+	cout << "Scrieti 1 daca doriti sa convertiti metri in centimetri." << endl;
+	cout << "Scrieti 2 daca doriti sa convertiti metri in milimetri. " << endl;
+	cout << "Scrieti 3 daca doriti sa convertiti metri in kilometri. " << endl;
+	cout << "Scrieti 4 daca doriti sa convertiti centimetri in metri. " << endl;
+	cout << "Scrieti 5 daca doriti sa convertiti milimetri in metri. " << endl;
+	cout << "Scrieti 6 daca doriti sa convertiti kilometri in metri. " << endl;
+	cout << "Scrieti 7 daca doriti sa convertiti milimetri in centimetri. " << endl;
+	cout << "Scrieti 8 daca doriti sa convertiti centimetri in milimetri. " << endl;
+	cin >> optiune;
+	if (optiune == 1)
+		mtocm();
+	if (optiune == 2)
+		mtomm();
+	if (optiune == 3)
+		mtokm();
+	if (optiune == 4)
+		cmtom();
+	if (optiune == 5)
+		mmtom();
+	if (optiune == 6)
+		kmtom();
+	if (optiune == 7)
+		mmtocm();
+	if (optiune == 8)
+		cmtomm();
+	return 0;
+}
+int arie()
+{
+	int optiune;
+	cout << "Ati ales conversiile pentru arie." << endl;
+	cout << "Scrieti 1 daca doriti sa convertiti metri patrati in hectare." << endl;
+	cout << "Scrieti 2 daca doriti sa convertiti metri patrati in arii. " << endl;
+	cout << "Scrieti 3 daca doriti sa convertiti hectare in metri patrati. " << endl;
+	cout << "Scrieti 4 daca doriti sa convertiti arii in metri patrati. " << endl;
+	cout << "Scrieti 5 daca doriti sa convertiti arii in hectare. " << endl;
+	cout << "Scrieti 6 daca doriti sa convertiti hectare in arii. " << endl;
+	cin >> optiune;
+	if (optiune == 1)
+		m2toha();
+	if (optiune == 2)
+		m2toa();
+	if (optiune == 3)
+		hatom2();
+	if (optiune == 4)
+		atom2();
+	if (optiune == 5)
+		atoha();
+	if (optiune == 6)
+		hatoa();
+	return 0;
+}
+int volum()
+{
+	int optiune;
+	cout << "Ati ales conversiile pentru volum." << endl;
+	cout << "Scrieti 1 daca doriti sa convertiti metri cubi in litri." << endl;
+	cout << "Scrieti 2 daca doriti sa convertiti litri in metri cubi. " << endl;
+	cout << "Scrieti 3 daca doriti sa convertiti centimetri cubi in metri cubi. " << endl;
+	cout << "Scrieti 4 daca doriti sa convertiti metri cubi in centimetri cubi. " << endl;
+	cout << "Scrieti 5 daca doriti sa convertiti litri in mililitri. " << endl;
+	cout << "Scrieti 6 daca doriti sa convertiti mililitri in litri. " << endl;
+	cin >> optiune;
+	if (optiune == 1)
+		m3tol();
+	if (optiune == 2)
+		ltom3();
+	if (optiune == 3)
+		cm3tom3();
+	if (optiune == 4)
+		m3tocm3();
+	if (optiune == 5)
+		ltoml();
+	if (optiune == 6)
+		mltol();
+	return 0;
+}
+int timp()
+{
+	int optiune;
+	cout << "Ati ales conversiile pentru timp." << endl;
+	cout << "Scrieti 1 daca doriti sa convertiti minute in secunde. " << endl;
+	cout << "Scrieti 2 daca doriti sa convertiti ore in secunde. " << endl;
+	cout << "Scrieti 3 daca doriti sa convertiti ore in minute. " << endl;
+	if (optiune == 1)
+		mintosec();
+	if (optiune == 2)
+		htosec();
+	if (optiune == 3)
+		htomin();
+	return 0;
+}
+int temperatura()
+{
+	int optiune;
+	cout << "Ati ales conversiile pentru temperatura." << endl;
+	cout << "Scrieti 1 daca doriti sa convertiti grade celsius in grade fahrenheit. " << endl;
+	cout << "Scrieti 2 daca doriti sa convertiti grad fahrenheit in grade celsius. " << endl;
+	if (optiune == 1)
+		ctof();
+	if (optiune == 2)
+		ftoc();
+	return 0;
+}
+int masa()
+{
+	int optiune;
+	cout << "Ati ales conversiile pentru masa." << endl;
+	cout << "Scrieti 1 daca doriti sa convertiti grame in kilograme. " << endl;
+	cout << "Scrieti 2 daca doriti sa convertiti grame in miligrame. " << endl;
+	cout << "Scrieti 3 daca doriti sa convertiti kilograme in grame. " << endl;
+	cout << "Scrieti 4 daca doriti sa convertiti miligrame in grame. " << endl;
+	if (optiune == 1)
+		gtokg();
+	if (optiune == 2)
+		gtomg();
+	if (optiune == 3)
+		kgtog();
+	if (optiune == 4)
+		mgtog();
+	return 0;
+}
+int energie()
+{
+	int optiune;
+	cout << "Ati ales conversiile pentru energie." << endl;
+	cout << "Scrieti 1 daca doriti sa convertiti jouli in kilojouli. " << endl;
+	cout << "Scrieti 2 daca doriti sa convertiti calorii in jouli. " << endl;
+	if (optiune == 1)
+		jtokj();
+	if (optiune == 2)
+		caltoj();
+	return 0;
+}
+int presiune()
+{
+	int optiune;
+	cout << "Ati ales conversiile pentru presiune." << endl;
+	cout << "Scrieti 1 daca doriti sa convertiti bari in PSI. " << endl;
+	cout << "Scrieti 2 daca doriti sa convertiti PSI in bari. " << endl;
+	if (optiune == 1)
+		bartopsi();
+	if (optiune == 2)
+		psitobar();
+	return 0;
+}
+int densitate()
+{
+	int optiune;
+	cout << "Ati ales conversiile pentru densitate." << endl;
+	cout << "Scrieti 1 daca doriti sa convertiti g/cm3 in kg/m3. " << endl;
+	cout << "Scrieti 2 daca doriti sa convertiti kg/m3 in g/cm3. " << endl;
+	if (optiune == 1)
+		gcm3tokgm3();
+	if (optiune == 2)
+		kgm3togcm3();
+	return 0;
+}
