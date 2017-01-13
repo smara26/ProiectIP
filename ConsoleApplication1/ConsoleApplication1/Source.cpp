@@ -1,5 +1,16 @@
-#include<iostream>
-#include<conio.h>
+//#include<iostream>
+//#include<conio.h>
+//#include<Windows.h>
+//#include<ctime>
+
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <windows.h>
+#include <algorithm>
+#include <ctime>
+#include <vector>
+#include <cstring>
 using namespace std;
 
 int mainmenu();
@@ -39,15 +50,15 @@ double psitobar();//transforma psi in bar
 double gcm3tokgm3();//transforma g/cm3 in kg/m3
 double kgm3togcm3();//transforma kg/m3 in g/cm3
 
-int lungime();//selecteaza daca doresti transformari 
-int arie();//selecteaza daca doresti transformari
-int volum();//selecteaza daca doresti transformari
-int timp();//selecteaza daca doresti transformari
-int temperatura();//selecteaza daca doresti transformari
-int masa();//selecteaza daca doresti transformari
-int energie();//selecteaza daca doresti transformari
-int presiune();//selecteaza daca doresti transformari
-int densitate();//selecteaza daca doresti transformari
+void lungime();//selecteaza daca doresti transformari 
+void arie();//selecteaza daca doresti transformari
+void volum();//selecteaza daca doresti transformari
+void timp();//selecteaza daca doresti transformari
+void temperatura();//selecteaza daca doresti transformari
+void masa();//selecteaza daca doresti transformari
+void energie();//selecteaza daca doresti transformari
+void presiune();//selecteaza daca doresti transformari
+void densitate();//selecteaza daca doresti transformari
 
 int main()
 {
@@ -99,15 +110,15 @@ int mainmenu()
 		densitate();
 	if (rubrica == 'I' || rubrica == 'i')
 		system("close");
-
+	system("cls");
 	return 0;
 
 }
 
-int lungime()
+void lungime()
 {
 	int optiune;
-	cout << "Ati ales conversiile pentru lungime." << endl;
+	cout << "\t\t Ati ales conversiile pentru lungime." << endl;
 	cout << "Scrieti 1 daca doriti sa convertiti metri in centimetri." << endl;
 	cout << "Scrieti 2 daca doriti sa convertiti metri in milimetri. " << endl;
 	cout << "Scrieti 3 daca doriti sa convertiti metri in kilometri. " << endl;
@@ -117,28 +128,72 @@ int lungime()
 	cout << "Scrieti 7 daca doriti sa convertiti milimetri in centimetri. " << endl;
 	cout << "Scrieti 8 daca doriti sa convertiti centimetri in milimetri. " << endl;
 	cin >> optiune;
-	if (optiune == 1)
+	system("csl");
+	switch (optiune)
+	{
+	case 1:
+	{
+		cout << "\n\n Ati ales conversia din metri in centimetri\n";
 		mtocm();
-	if (optiune == 2)
+		system("cls");
+	}
+	case 2:
+	{
+		cout << "\n\n Ati ales conversia din metri in milimetri\n";
 		mtomm();
-	if (optiune == 3)
+		system("cls");
+	}
+	case 3:
+	{
+		cout << "\n\n Ati ales conversia din metri in kilometri\n";
 		mtokm();
-	if (optiune == 4)
+		system("cls");
+	}
+	case 4:
+	{
+		cout << "\n\n Ati ales conversia din centimetri in metri\n";
 		cmtom();
-	if (optiune == 5)
+		system("cls");
+	}
+	case 5:
+	{
+		cout << "\n\n Ati ales conversia din milimetri in metri\n";
 		mmtom();
-	if (optiune == 6)
+		system("cls");
+	}
+	case 6:
+	{
+		cout << "\n\n Ati ales conversia din kilometri in metri\n";
 		kmtom();
-	if (optiune == 7)
+		system("cls");
+	}
+	case 7:
+	{
+		cout << "\n\n Ati ales conversia din milimetri in centimetri\n";
 		mmtocm();
-	if (optiune == 8)
+		system("cls");
+	}
+	case 8:
+	{
+		cout << "\n\n Ati ales conversia din centimetri in milimetri\n";
 		cmtomm();
-	return 0;
+		system("cls");
+	}
+	default:
+	{
+		cout << "\n\n Ati ales o optiune invalida\n";
+		cout << "Incercati din nou\n";
+		cout << "\n\n\n";
+		lungime();
+	}
+		break;
+	}
+	system("cls");
 }
-int arie()
+void arie()
 {
 	int optiune;
-	cout << "Ati ales conversiile pentru arie." << endl;
+	cout << "\t\t Ati ales conversiile pentru arie." << endl;
 	cout << "Scrieti 1 daca doriti sa convertiti metri patrati in hectare." << endl;
 	cout << "Scrieti 2 daca doriti sa convertiti metri patrati in arii. " << endl;
 	cout << "Scrieti 3 daca doriti sa convertiti hectare in metri patrati. " << endl;
@@ -146,24 +201,60 @@ int arie()
 	cout << "Scrieti 5 daca doriti sa convertiti arii in hectare. " << endl;
 	cout << "Scrieti 6 daca doriti sa convertiti hectare in arii. " << endl;
 	cin >> optiune;
-	if (optiune == 1)
+	system("cls");
+	switch (optiune)
+	{
+	case 1:
+	{
+		cout << "\n\n Ati ales conversia din metri patrati in hectare\n";
 		m2toha();
-	if (optiune == 2)
+		system("cls");
+	}
+	case 2:
+	{
+		cout << "\n\n Ati ales conversia din matri patrati in arii\n";
 		m2toa();
-	if (optiune == 3)
+		system("cls");
+	}
+	case 3:
+	{
+		cout << "\n\n Ati ales conversia din hectare in metri patrati\n";
 		hatom2();
-	if (optiune == 4)
+		system("cls");
+	}
+	case 4:
+	{
+		cout << "\n\n Ati ales conversia din arii in metri patrati\n";
 		atom2();
-	if (optiune == 5)
+		system("cls");
+	}
+	case 5:
+	{
+		cout << "\n\n Ati ales conversia din arii in hectare\n";
 		atoha();
-	if (optiune == 6)
+		system("cls");
+	}
+	case 6:
+	{
+		cout << "\n\n Ati ales conversia din hectare in arii\n";
 		hatoa();
-	return 0;
+		system("cls");
+	}
+	default:
+	{
+		cout << "\n\n Ati ales o optiune invalida\n";
+		cout << "Incercati din nou\n";
+		cout << "\n\n\n";
+		arie();
+	}
+	break;
+	}
+	system("cls");
 }
-int volum()
+void volum()
 {
 	int optiune;
-	cout << "Ati ales conversiile pentru volum." << endl;
+	cout << "\t\t Ati ales conversiile pentru volum." << endl;
 	cout << "Scrieti 1 daca doriti sa convertiti metri cubi in litri." << endl;
 	cout << "Scrieti 2 daca doriti sa convertiti litri in metri cubi. " << endl;
 	cout << "Scrieti 3 daca doriti sa convertiti centimetri cubi in metri cubi. " << endl;
@@ -171,106 +262,274 @@ int volum()
 	cout << "Scrieti 5 daca doriti sa convertiti litri in mililitri. " << endl;
 	cout << "Scrieti 6 daca doriti sa convertiti mililitri in litri. " << endl;
 	cin >> optiune;
-	if (optiune == 1)
+	system("cls");
+	switch (optiune)
+	{
+	case 1:
+	{
+		cout << "\n\n Ati ales conversia din metri cubi in litri\n";
 		m3tol();
-	if (optiune == 2)
+		system("cls");
+	}
+	case 2:
+	{
+		cout << "\n\n Ati ales conversia din litri in metri cubi\n";
 		ltom3();
-	if (optiune == 3)
+		system("cls");
+	}
+	case 3:
+	{
+		cout << "\n\n Ati ales conversia din centimetri cubi in metri cubi\n";
 		cm3tom3();
-	if (optiune == 4)
+		system("cls");
+	}
+	case 4:
+	{
+		cout << "\n\n Ati ales conversia din metri cubi in centimetri cubi\n";
 		m3tocm3();
-	if (optiune == 5)
+		system("cls");
+	}
+	case 5:
+	{
+		cout << "\n\n Ati ales conversia din litri in mililitri\n";
 		ltoml();
-	if (optiune == 6)
+		system("cls");
+	}
+	case 6:
+	{
+		cout << "\n\n Ati ales conversia din mililitri in litri\n";
 		mltol();
-	return 0;
+		system("cls");
+	}
+	default:
+	{
+		cout << "\n\n Ati ales o optiune invalida\n";
+		cout << "Incercati din nou\n";
+		cout << "\n\n\n";
+		volum();
+	}
+	break;
+	}
+	system("cls");
 }
-int timp()
+void timp()
 {
 	int optiune;
-	cout << "Ati ales conversiile pentru timp." << endl;
+	cout << "\t\t Ati ales conversiile pentru timp." << endl;
 	cout << "Scrieti 1 daca doriti sa convertiti minute in secunde. " << endl;
 	cout << "Scrieti 2 daca doriti sa convertiti ore in secunde. " << endl;
 	cout << "Scrieti 3 daca doriti sa convertiti ore in minute. " << endl;
 	cin >> optiune;
-	if (optiune == 1)
+	system("cls");
+	switch (optiune)
+	{
+	case 1:
+	{
+		cout << "\n\n Ati ales conversia din minute in secunde\n";
 		mintosec();
-	if (optiune == 2)
+		system("cls");
+	}
+	case 2:
+	{
+		cout << "\n\n Ati ales conversia din ore in secunde\n";
 		htosec();
-	if (optiune == 3)
+		system("cls");
+	}
+	case 3:
+	{
+		cout << "\n\n Ati ales conversia din ore in minute\n";
 		htomin();
-	return 0;
+		system("cls");
+	}
+	default:
+	{
+		cout << "\n\n Ati ales o optiune invalida\n";
+		cout << "Incercati din nou\n";
+		cout << "\n\n\n";
+		timp();
+	}
+	break;
+	}
+	system("cls");
 }
-int temperatura()
+void temperatura()
 {
 	int optiune;
-	cout << "Ati ales conversiile pentru temperatura." << endl;
+	cout << "\t\t Ati ales conversiile pentru temperatura." << endl;
 	cout << "Scrieti 1 daca doriti sa convertiti grade celsius in grade fahrenheit. " << endl;
 	cout << "Scrieti 2 daca doriti sa convertiti grad fahrenheit in grade celsius. " << endl;
 	cin >> optiune;
-	if (optiune == 1)
+	system("cls");
+	switch (optiune)
+	{
+	case 1:
+	{
+		cout << "\n\n Ati ales conversia din grade celsius in grade fahrenheit\n";
 		ctof();
-	if (optiune == 2)
+		system("cls");
+	}
+	case 2:
+	{
+		cout << "\n\n Ati ales conversia din grade fahrenheit in grade celsius\n";
 		ftoc();
-	return 0;
+		system("cls");
+	}
+	default:
+	{
+		cout << "\n\n Ati ales o optiune invalida\n";
+		cout << "Incercati din nou\n";
+		cout << "\n\n\n";
+		temperatura();
+	}
+	break;
+	}
+	system("cls");
 }
-int masa()
+void masa()
 {
 	int optiune;
-	cout << "Ati ales conversiile pentru masa." << endl;
+	cout << "\t\t Ati ales conversiile pentru masa." << endl;
 	cout << "Scrieti 1 daca doriti sa convertiti grame in kilograme. " << endl;
 	cout << "Scrieti 2 daca doriti sa convertiti grame in miligrame. " << endl;
 	cout << "Scrieti 3 daca doriti sa convertiti kilograme in grame. " << endl;
 	cout << "Scrieti 4 daca doriti sa convertiti miligrame in grame. " << endl;
 	cin >> optiune;
-	if (optiune == 1)
+	system("cls");
+	switch (optiune)
+	{
+	case 1:
+	{
+		cout << "\n\n Ati ales conversia din grame in kilograme\n";
 		gtokg();
-	if (optiune == 2)
+		system("cls");
+	}
+	case 2:
+	{
+		cout << "\n\n Ati ales conversia din grame in miligrame\n";
 		gtomg();
-	if (optiune == 3)
+		system("cls");
+	}
+	case 3:
+	{
+		cout << "\n\n Ati ales conversia din kilograme in grame\n";
 		kgtog();
-	if (optiune == 4)
+		system("cls");
+	}
+	case 4:
+	{
+		cout << "\n\n Ati ales conversia din miligrame in grame\n";
 		mgtog();
-	return 0;
+		system("cls");
+	}
+	default:
+	{
+		cout << "\n\n Ati ales o optiune invalida\n";
+		cout << "Incercati din nou\n";
+		cout << "\n\n\n";
+		masa();
+	}
+	break;
+	}
+	system("cls");
 }
-int energie()
+void energie()
 {
 	int optiune;
-	cout << "Ati ales conversiile pentru energie." << endl;
+	cout << "\t\t Ati ales conversiile pentru energie." << endl;
 	cout << "Scrieti 1 daca doriti sa convertiti jouli in kilojouli. " << endl;
 	cout << "Scrieti 2 daca doriti sa convertiti calorii in jouli. " << endl;
 	cin >> optiune;
-	if (optiune == 1)
+	system("cls");
+	switch (optiune)
+	{
+	case 1:
+	{
+		cout << "\n\n Ati ales conversia din jouli in kilojouli\n";
 		jtokj();
-	if (optiune == 2)
+		system("cls");
+	}
+	case 2:
+	{
+		cout << "\n\n Ati ales conversia din calorii in jouli\n";
 		caltoj();
-	return 0;
+		system("cls");
+	}
+	default:
+	{
+		cout << "\n\n Ati ales o optiune invalida\n";
+		cout << "Incercati din nou\n";
+		cout << "\n\n\n";
+		energie();
+	}
+	break;
+	}
+	system("cls");
 }
-int presiune()
+void presiune()
 {
 	int optiune;
-	cout << "Ati ales conversiile pentru presiune." << endl;
+	cout << "\t\t Ati ales conversiile pentru presiune." << endl;
 	cout << "Scrieti 1 daca doriti sa convertiti bari in PSI. " << endl;
 	cout << "Scrieti 2 daca doriti sa convertiti PSI in bari. " << endl;
 	cin >> optiune;
-	if (optiune == 1)
+	system("cls");
+	switch (optiune)
+	{
+	case 1:
+	{
+		cout << "\n\n Ati ales conversia din bari in PSI\n";
 		bartopsi();
-	if (optiune == 2)
+		system("cls");
+	}
+	case 2:
+	{
+		cout << "\n\n Ati ales conversia din PSI in bari\n";
 		psitobar();
-	return 0;
+		system("cls");
+	}
+	default:
+	{
+		cout << "\n\n Ati ales o optiune invalida\n";
+		cout << "Incercati din nou\n";
+		cout << "\n\n\n";
+		presiune();
+	}
+	break;
+	}
+	system("cls");
 }
-int densitate()
+void densitate()
 {
 	int optiune;
-	cout << "Ati ales conversiile pentru densitate." << endl;
+	cout << "\t\t Ati ales conversiile pentru densitate." << endl;
 	cout << "Scrieti 1 daca doriti sa convertiti g/cm3 in kg/m3. " << endl;
 	cout << "Scrieti 2 daca doriti sa convertiti kg/m3 in g/cm3. " << endl;
 	cin >> optiune;
-	if (optiune == 1)
+	system("cls");
+	switch (optiune)
+	{
+	case 1:
+	{
+		cout << "\n\n Ati ales conversia din g/cm3 in kg/m3\n";
 		gcm3tokgm3();
-	if (optiune == 2)
+		system("cls");
+	}
+	case 2:
+	{
+		cout << "\n\n Ati ales conversia din kg/m3 in g/cm3\n";
 		kgm3togcm3();
-	return 0;
+		system("cls");
+	}
+	default:
+	{
+		cout << "\n\n Ati ales o optiune invalida\n";
+		cout << "Incercati din nou\n";
+		cout << "\n\n\n";
+		densitate();
+	}
+	break;
+	}
+	system("cls");
 }
 
 
